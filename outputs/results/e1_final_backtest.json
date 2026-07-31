@@ -1,0 +1,11 @@
+{
+  "sortino_mean": 6.441278447533254,
+  "sortino_std": 0.06110214092433997,
+  "ret_mean": 860.1986979308772,
+  "dd_mean": -8.053340376505872,
+  "sharpe_mean": 2.5032459816418946,
+  "n_seeds": 3,
+  "n_features": 37,
+  "dataset_last_date": "2026-04-19 00:00:00",
+  "config": "E1 D7 combo no-short (floor=0, K=60/30/15, sigmoid=15)"
+}

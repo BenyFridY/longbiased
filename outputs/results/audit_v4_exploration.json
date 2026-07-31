@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-02-11T13:17:19.301759",
+  "method": "audit_v4_exploration",
+  "description": "Deep robustness & overfitting analysis of V4 winners (Asymmetric, Bag20)",
+  "verdict": "Asymmetric +245% is NOT ROBUST. V2 (Bag5+Weekly, +221%) remains best.",
+  "test_1_seed_stability": {
+    "asymmetric": {
+      "returns_pct": [
+        244.92110681392742,
+        212.72115776726213,
+        179.07064693066465,
+        242.19971373112318,
+        200.96117527009733,
+        216.46602234710969,
+        188.00115328937363,
+        220.43830545579505,
+        209.47687719629977,
+        198.08961088201835
+      ],
+      "mean": 211.2345769683671,
+      "std": 20.158475499740913,
+      "min": 179.07064693066465,
+      "max": 244.92110681392742,
+      "spread_pp": 65.85045988326277,
+      "beat_v2_count": 2,
+      "verdict": "UNSTABLE"
+    },
+    "v2_baseline": {
+      "returns_pct": [
+        221.2006111195074,
+        223.7782102995908,
+        222.3452954394496,
+        230.7381811867143,
+        206.8095426231059
+      ],
+      "spread_pp": 23.928638563608416
+    }
+  },
+  "test_2_shuffled_target": {
+    "shuffled_returns_pct": [
+      141.62122663367228,
+      191.1090231077478,
+      132.23388695930515,
+      152.98037113928217,
+      79.96098947341001
+    ],
+    "shuffled_mean": 139.58109946268348,
+    "real_return": 245.0,
+    "ml_lift_pp": 105.41890053731652
+  },
+  "test_3_year_by_year": {
+    "2022": {
+      "asymmetric_return": -0.14326019021825298,
+      "v2_return": -0.11462219180122557,
+      "btc_return": -0.6518057987140278,
+      "delta_pp": -2.863799841702741,
+      "regime": "BEAR"
+    },
+    "2023": {
+      "asymmetric_return": 1.5363585417082848,
+      "v2_return": 1.0013484324119322,
+      "btc_return": 1.6587359140626194,
+      "delta_pp": 53.501010929635264,
+      "regime": "BULL"
+    },
+    "2024": {
+      "asymmetric_return": 0.6978967416634856,
+      "v2_return": 0.8663895757657896,
+      "btc_return": 1.1410763577265994,
+      "delta_pp": -16.8492834102304,
+      "regime": "BULL"
+    },
+    "2025": {
+      "asymmetric_return": 0.08095683308408352,
+      "v2_return": 0.10554722034683639,
+      "btc_return": -0.060816588839263996,
+      "delta_pp": -2.4590387262752866,
+      "regime": "MIXED"
+    },
+    "2026": {
+      "asymmetric_return": -0.07460975786539081,
+      "v2_return": -0.07142502790558625,
+      "btc_return": -0.1136656812140251,
+      "delta_pp": -0.31847299598045664,
+      "regime": "BEAR"
+    }
+  },
+  "test_4_allocation": {
+    "asymmetric_avg": 0.5942256245757501,
+    "v2_avg": 0.5195898082125985,
+    "diff": 0.07463581636315164,
+    "asym_pct_short": 2.8150134048257374,
+    "asym_pct_high_bull": 31.032171581769436
+  },
+  "test_5_predictions": {
+    "bull_pred_mean": 0.050015933805402944,
+    "bear_pred_mean": -0.037133233116360034,
+    "net_pct_positive": 63.47184986595175
+  },
+  "test_6_directional_accuracy": {
+    "asymmetric": 53.92670157068062,
+    "v2_baseline": 52.84974093264248
+  },
+  "test_7_concentration": {
+    "total_excess_pct": 12.965515156224411,
+    "top10_days_contribution_pct": 25.373525739620934,
+    "pct_from_top10": 195.70009701804833
+  },
+  "test_9_data_leakage": {
+    "leakage_found": false,
+    "year_gaps": {
+      "2022": 1,
+      "2023": 1,
+      "2024": 1,
+      "2025": 1,
+      "2026": 1
+    }
+  },
+  "concerns": [
+    "HIGH seed instability",
+    "Higher avg allocation (+0.075) = leverage effect",
+    "Edge concentrated in few days"
+  ],
+  "root_cause": [
+    "Higher avg allocation (0.59 vs 0.52) = +7.5% more BTC exposure",
+    "In bull-biased 2022-2026 OOS period, more exposure = more return",
+    "+54pp edge in 2023 alone drives most outperformance",
+    "Only 2/10 seed sets beat V2 -> +245% was LUCKY seed choice",
+    "Mean across 10 seeds = +211%, BELOW V2 +221%"
+  ]
+}

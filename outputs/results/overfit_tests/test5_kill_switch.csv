@@ -1,0 +1,7 @@
+config,cum_,ann_,sortino,sharpe,dd_
+H2 baseline (atual),1191.1,56.1,5.61,2.09,-4.01
+H2 + kill switch,1191.1,56.1,5.61,2.09,-4.01
+H2 + acc de-risk,978.5,51.9,5.55,2.06,-4.01
+H2 + both controls,978.5,51.9,5.55,2.06,-4.01
+H1 (60/30/15) + both controls,666.7,44.2,6.91,1.99,-2.88
+Conservative (40/20/10) + both,422.7,35.7,8.45,1.78,-1.74

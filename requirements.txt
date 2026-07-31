@@ -1,0 +1,131 @@
+# ============================================================================
+# Long-Biased BTC/CDI - Dependencies
+# Project: Long Bias Cripto - FIM com Sinais IA (RL/ML/DL)
+# Updated: October 2025
+# ============================================================================
+
+# ===== CORE DATA & COMPUTATION =====
+pandas==2.3.3                      # PINNED (reproducibility) — affects backtest numbers
+numpy==2.4.3                       # PINNED (reproducibility) — RandomState bootstrap + XGBoost determinism
+scipy==1.17.1                      # PINNED (reproducibility)
+
+# ===== GCP & DATA EXTRACTION =====
+google-cloud-bigquery>=3.11.4      # BigQuery client
+google-auth>=2.22.0                # GCP authentication
+google-auth-oauthlib>=1.0.0        # OAuth for GCP
+google-auth-httplib2>=0.1.0        # HTTP lib for GCP
+
+# ===== DATA STORAGE & FORMATS =====
+pyarrow>=12.0.0                    # Parquet format support
+PyYAML>=6.0                        # YAML config files
+
+# ===== MACHINE LEARNING - CORE =====
+scikit-learn==1.8.0                # PINNED (reproducibility) — feature selection + determinism
+xgboost==3.2.0                     # PINNED — XGBoost training is non-deterministic
+                                   # across CPU architectures and minor versions.
+                                   # Backtest numbers (CAGR 57%, Sortino 3.51) are
+                                   # validated on this version + Intel Ultra 9.
+
+# ===== MACHINE LEARNING - ADVANCED =====
+# Boruta>=0.3                      # Boruta feature selection (research: 82% accuracy)
+# Note: Uncomment after installing: pip install Boruta
+
+# ===== DEEP LEARNING (for future RL models) =====
+# tensorflow>=2.13.0               # Deep learning framework
+# torch>=2.0.0                     # PyTorch (alternative to TF)
+# Note: Install based on your preference (TF or PyTorch)
+
+# ===== REINFORCEMENT LEARNING =====
+# gym>=0.26.0                      # RL environments
+# stable-baselines3>=2.0.0         # RL algorithms (PPO, DDQN, etc.)
+# Note: Uncomment when starting RL implementation
+
+# ===== MARKET DATA APIs =====
+yfinance>=0.2.28                   # Yahoo Finance (SP500, Gold, DXY, etc.) - FREE
+fredapi>=0.5.1                     # Federal Reserve data (yields, M2, etc.) - FREE
+requests>=2.31.0                   # HTTP requests for APIs
+urllib3>=2.0.0                     # URL handling
+
+# ===== EXTRA DATA APIs (Added for enhanced features) =====
+pytrends>=4.9.0                    # Google Trends API wrapper - FREE
+lxml>=4.9.0                        # HTML/XML parsing (for ETF scraping)
+html5lib>=1.1                      # HTML5 parser
+
+# ===== ON-CHAIN DATA APIs (Optional - require API keys) =====
+# Note: Free tiers available for all
+# glassnode>=2.0.0                 # Glassnode on-chain data
+# coinmetrics>=2.0.0               # CoinMetrics on-chain data
+# Note: Install if you have API keys
+
+# ===== VISUALIZATION =====
+matplotlib>=3.7.0                  # Plotting
+seaborn>=0.12.0                    # Statistical visualization
+plotly>=5.17.0                     # Interactive plots
+streamlit>=1.50.0                  # Dashboard local (scripts/production/dashboard.py)
+
+# ===== UTILITIES =====
+python-dateutil>=2.8.2             # Date utilities
+tqdm>=4.65.0                       # Progress bars
+
+# ===== TESTING =====
+pytest>=7.4.0                      # Testing framework
+pytest-cov>=4.1.0                  # Test coverage
+
+# ===== CODE QUALITY =====
+black>=23.7.0                      # Code formatting
+flake8>=6.0.0                      # Linting
+mypy>=1.5.0                        # Type checking
+
+# ===== LOGGING & MONITORING =====
+# (using standard library logging for now)
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS
+# ============================================================================
+#
+# Basic installation (required for core functionality):
+#   pip install -r requirements.txt
+#
+# Optional - Boruta feature selection (research-backed, highly recommended):
+#   pip install Boruta
+#
+# Optional - Deep Learning (choose one):
+#   For TensorFlow: pip install tensorflow>=2.13.0
+#   For PyTorch:    pip install torch>=2.0.0
+#
+# Optional - Reinforcement Learning:
+#   pip install gym>=0.26.0 stable-baselines3>=2.0.0
+#
+# Optional - On-chain data (if you have API keys):
+#   pip install glassnode coinmetrics
+#
+# Upgrade all packages:
+#   pip install --upgrade -r requirements.txt
+#
+# ============================================================================
+# API KEYS NEEDED (all have FREE tiers)
+# ============================================================================
+#
+# 1. FRED API (Macro data - FREE):
+#    https://fred.stlouisfed.org/docs/api/api_key.html
+#
+# 2. Glassnode (On-chain - Free tier: 14 metrics):
+#    https://studio.glassnode.com/settings/api
+#
+# 3. CoinMetrics (On-chain - Community FREE):
+#    https://coinmetrics.io/community-network-data/
+#
+# 4. No API key needed:
+#    - yfinance (Yahoo Finance)
+#    - Blockchain.info charts
+#    - Alternative.me (Fear & Greed Index)
+#
+# ============================================================================
+# REMOVED DEPENDENCIES (unused in codebase)
+# ============================================================================
+#
+# The following were in the old requirements but never imported:
+# - structlog>=23.1.0              # Not used anywhere
+# - cerberus>=1.3.4                # Data validation not implemented
+#
+# ============================================================================

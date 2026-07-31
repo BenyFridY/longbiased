@@ -1,0 +1,22 @@
+{
+  "weekly": {
+    "cum_ret": 6.540097605997918,
+    "sortino_abs_w": 7.836614334878943,
+    "sharpe_abs_w": 2.5946296040332375,
+    "sharpe_excess_w": 1.9415578971939869,
+    "max_dd_weekly": -0.024067366818420942,
+    "n_rebals": 248
+  },
+  "daily": {
+    "cum_ret": 6.522735202616107,
+    "cagr": 0.6014929715630439,
+    "sortino_daily": 3.7534228684919855,
+    "sharpe_daily": 3.3503696452301943,
+    "max_dd_daily": -0.07069630519147885,
+    "n_days": 1564
+  },
+  "training_window": "expanding (3-7 years)",
+  "rebals_today": 248,
+  "rebals_horizon_ablation_4y_h3": 248,
+  "dataset_rows_today": 2667
+}

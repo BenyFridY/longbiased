@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-02-05T18:13:04.245628",
+  "method": "walk_forward_out_of_sample",
+  "test_period": "2022-2026",
+  "training_method": "optimize on past only, re-optimize each year",
+  "walk_forward_oos": {
+    "total": 1.045056134839816,
+    "btc": 0.5343697998135046,
+    "excess": 0.5106863350263113,
+    "sortino": 0.3660006562776427,
+    "max_dd": -0.43457103451161627,
+    "short_pct": 0.15803631472763954,
+    "avg_alloc": 0.513447261593482
+  },
+  "old_balanced_v2": {
+    "total": 1.27259154953081,
+    "btc": 0.7037282658108219,
+    "excess": 0.5688632837199881,
+    "sortino": 0.5067087083382764,
+    "max_dd": -0.3222754474804789,
+    "short_pct": 0.1628686327077748,
+    "avg_alloc": 0.5219504021447721
+  }
+}

@@ -1,0 +1,16 @@
+test,config,cum_%,sortino,sharpe,max_dd_%,ann_%
+T3_sigmoid,scale=1,738.0,6.62,1.98,-2.51,46.2
+T3_sigmoid,scale=5,978.0,6.53,2.05,-2.91,51.9
+T3_sigmoid,scale=10,1123.4,5.94,2.08,-3.59,54.8
+T3_sigmoid,scale=15,1191.1,5.61,2.09,-4.01,56.1
+T3_sigmoid,scale=20,1234.5,5.48,2.09,-4.25,56.8
+T3_sigmoid,scale=25,1262.9,5.4,2.1,-4.37,57.3
+T3_sigmoid,scale=50,1318.4,5.25,2.1,-4.51,58.3
+T3_sigmoid,scale=100,1322.1,5.07,2.09,-4.52,58.3
+T3_sigmoid,scale=1000,1312.7,4.69,2.08,-4.52,58.2
+T4_shuffle,shuffle_mean,109.2,0.64,0.27,-20.56,0.0
+T4_shuffle,shuffle_p95,230.5,1.11,0.79,-31.77,0.0
+T5_random,random_mean,104.3,0.58,0.24,-21.82,0.0
+T6_sign_only,sign×avg_mag,744.2,2.19,1.54,-7.46,47.6
+T7_const_pos,const_+1%,166.6,1.13,0.5,-19.61,23.9
+T8_no_regime,K=50_all,1139.2,2.89,1.9,-10.66,55.6

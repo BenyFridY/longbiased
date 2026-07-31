@@ -1,0 +1,29 @@
+{
+  "n_permutations": 1000000,
+  "baseline": {
+    "cum_pct": 655.6683013101932,
+    "sortino_weekly": 7.601160020973782,
+    "sharpe_weekly": 2.639289299761102,
+    "max_dd_weekly_pct": -2.464649000000006
+  },
+  "permutation_distribution": {
+    "cum_pct_mean": 98.67674163132135,
+    "cum_pct_std": 54.82602576448454,
+    "cum_pct_p95": 199.3579699303478,
+    "cum_pct_p99": 260.83167245642255,
+    "cum_pct_max": 604.9228655684927,
+    "sortino_w_mean": 0.7669882569149444,
+    "sortino_w_p95": 1.4677210389394852,
+    "sortino_w_max": 4.797706472084112
+  },
+  "p_values": {
+    "cum_return": 0.0,
+    "sortino_weekly": 0.0,
+    "sharpe_weekly": 0.0
+  },
+  "n_beating_baseline": {
+    "cum_return": 0,
+    "sortino_weekly": 0,
+    "sharpe_weekly": 0
+  }
+}

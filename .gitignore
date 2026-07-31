@@ -1,0 +1,41 @@
+# Secrets
+.env
+.env.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+tmpclaude-*
+
+# Trained model cache (regenerated via run_daily.py --retrain on first use)
+scripts/production/data/cached_models.pkl
+
+# Large artifacts (kept locally, regenerable from scripts)
+# - permutation_10k.csv: full per-shuffle output (78 MB); summary JSON has the headline numbers
+# - v18_final_*.html: self-contained plotly (~5 MB each); PNG equivalents already tracked
+# - dataset snapshots v24/v25/pre_v25: only dataset_enhanced.csv is canonical
+outputs/results/permutation_10k.csv
+outputs/charts/v18_final_*.html
+outputs/feature_selection/dataset_v24.csv
+outputs/feature_selection/dataset_enhanced_pre_v25.csv
+outputs/feature_selection/dataset_enhanced_v25.csv
+
+# Generated presentation deck
+apresentacao/deck.pdf
+apresentacao/deck.html
+outputs/run_daily_task.log
+apresentacao/banca/preview.*.png
+
+# Config local do Claude Code (nao versionar)
+.claude/

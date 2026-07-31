@@ -1,0 +1,75 @@
+{
+  "config": {
+    "seeds": [
+      242,
+      251,
+      263
+    ],
+    "weekly_thresholds": [
+      0.08,
+      0.1,
+      0.12,
+      0.15
+    ],
+    "start": "2022-01-07",
+    "end": "2026-04-17",
+    "BAGS": 160,
+    "K_REGIME": {
+      "BULL": 60,
+      "MILD": 30,
+      "BEAR": 15
+    }
+  },
+  "results": {
+    "daily_8pct": {
+      "n_rebals": 248,
+      "n_emerg_nonfri": 24,
+      "cagr_mean": 0.3656282932089419,
+      "cagr_std": 0.010863111272983558,
+      "sortino_d_mean": 1.6437925396581787,
+      "sortino_d_std": 0.023623842791833122,
+      "max_dd_d_mean": -0.1477347324727674,
+      "max_dd_d_std": 0.0005969564072617114
+    },
+    "weekly_0.080": {
+      "n_rebals": 506,
+      "n_emerg_nonfri": 282,
+      "cagr_mean": 0.27249179437944965,
+      "cagr_std": 0.013169052310733302,
+      "sortino_d_mean": 1.0910558557552783,
+      "sortino_d_std": 0.037865621504760825,
+      "max_dd_d_mean": -0.1477347324727674,
+      "max_dd_d_std": 0.0005969564072617114
+    },
+    "weekly_0.100": {
+      "n_rebals": 405,
+      "n_emerg_nonfri": 181,
+      "cagr_mean": 0.3042383739514563,
+      "cagr_std": 0.01391793299226476,
+      "sortino_d_mean": 1.2101123192423044,
+      "sortino_d_std": 0.03922832836363592,
+      "max_dd_d_mean": -0.1477347324727674,
+      "max_dd_d_std": 0.0005969564072617114
+    },
+    "weekly_0.120": {
+      "n_rebals": 337,
+      "n_emerg_nonfri": 113,
+      "cagr_mean": 0.3229389026115869,
+      "cagr_std": 0.01330301779869524,
+      "sortino_d_mean": 1.3239273231811701,
+      "sortino_d_std": 0.0436489243033812,
+      "max_dd_d_mean": -0.1477347324727674,
+      "max_dd_d_std": 0.0005969564072617114
+    },
+    "weekly_0.150": {
+      "n_rebals": 287,
+      "n_emerg_nonfri": 63,
+      "cagr_mean": 0.3598878693140069,
+      "cagr_std": 0.013946888950309766,
+      "sortino_d_mean": 1.5433164773571348,
+      "sortino_d_std": 0.042960211317701245,
+      "max_dd_d_mean": -0.1477347324727674,
+      "max_dd_d_std": 0.0005969564072617114
+    }
+  }
+}
